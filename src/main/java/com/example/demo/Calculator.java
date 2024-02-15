@@ -1,3 +1,5 @@
+package com.example.demo;
+
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.Scanner;
@@ -60,7 +62,7 @@ public class Calculator{
         }
     }
 
-    private static double getValidDoubleInput(Scanner scanner) {
+    public static double getValidDoubleInput(Scanner scanner) {
         while (!scanner.hasNextDouble()) {
             System.out.print("Invalid input. Please enter a valid number: ");
             scanner.next(); // Consume the invalid input
@@ -68,7 +70,7 @@ public class Calculator{
         return scanner.nextDouble();
     }
 
-    private static int getValidIntegerInput(Scanner scanner) {
+    public static int getValidIntegerInput(Scanner scanner) {
         while (!scanner.hasNextInt()) {
             System.out.print("Invalid input. Please enter a valid integer: ");
             scanner.next(); // Consume the invalid input
@@ -76,11 +78,11 @@ public class Calculator{
         return scanner.nextInt();
     }
 
-    private static BigDecimal calculateSquareRoot(double input) {
+    static BigDecimal calculateSquareRoot(double input) {
         return new BigDecimal(Math.sqrt(input), MathContext.DECIMAL64);
     }
 
-    private static BigDecimal calculateFactorial(int n) {
+    static BigDecimal calculateFactorial(int n) {
         BigDecimal result = BigDecimal.ONE;
         for (int i = 2; i <= n; i++) {
             result = result.multiply(BigDecimal.valueOf(i));
@@ -88,11 +90,11 @@ public class Calculator{
         return result;
     }
 
-    private static BigDecimal calculateNaturalLogarithm(double input) {
+    static BigDecimal calculateNaturalLogarithm(double input) {
         return new BigDecimal(Math.log(input), MathContext.DECIMAL64);
     }
 
-    private static BigDecimal calculatePower(double base, double exponent) {
+    static BigDecimal calculatePower(double base, double exponent) {
         return new BigDecimal(Math.pow(base, exponent), MathContext.DECIMAL64);
     }
 }
