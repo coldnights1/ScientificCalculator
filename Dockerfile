@@ -11,7 +11,7 @@ COPY . .
 RUN mvn clean install
 
 # Use an official OpenJDK runtime as a parent image
-FROM adoptopenjdk:17-jre-hotspot
+FROM openjdk:17-jdk-alpine
 
 # Set the working directory to /usr/app
 WORKDIR /usr/app
