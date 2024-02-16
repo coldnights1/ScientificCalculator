@@ -1,0 +1,2 @@
+[localhost]
+iiitb ansible_connection=local
