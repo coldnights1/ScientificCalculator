@@ -1,2 +1,2 @@
-[localhost]
-iiitb ansible_connection=local
+ansible_host=localhost ansible_user=iiitb ansible_ssh_pass=12345
+ansible_ssh_common_args = '-o StrictHostKeyChecking=no'
