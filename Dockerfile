@@ -20,5 +20,6 @@ WORKDIR /app
 # Copy the built JAR file from the Maven image
 COPY --from=build /app/target/*.jar ./app.jar
 
+EXPOSE 8080
 # Specify the command to run your application
 CMD ["java", "-jar", "app.jar"]
