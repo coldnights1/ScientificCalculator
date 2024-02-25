@@ -1,4 +1,4 @@
 FROM openjdk:17
-COPY ./target/Calculator-1.0-SNAPSHOT.jar ./
+COPY ./target/demo-0.0.1-SNAPSHOT.jar ./
 WORKDIR ./
-CMD ["java","-cp","Calculator-1.0-SNAPSHOT.jar","com.example.demo"]
+CMD ["java","-cp","demo-0.0.1-SNAPSHOT.jar","com.example.demo"]
